@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Expenses Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Home Expenses Calculator</h1>
+        <form id="expenses-form">
+            <label for="rent">Rent/Mortages:*</label>
+            <input type="number" id="rent" name="rent" placeholder="Enter rent amount" required>
+            
+            <label for="loan-type">Loans:</label>
+            <select id="loan-type" name="loan-type">
+                <option value="none">No loans</option>
+                <option value="home-equity">Home Equity</option>
+                <option value="car">Car</option>
+                <option value="college">College/Higher Education</option>
+                <option value="other-loans">Other loans</option>
+            </select>
+
+            <div id="loan-details" style="display: none;">
+                <h3>Loan Details</h3>
+                <label for="loan-name">Loan Name:</label>
+                <input type="text" id="loan-name" name="loan-name" placeholder="Enter loan name">
+                
+                <label for="monthly-payment">Monthly Payment:</label>
+                <input type="number" id="monthly-payment" name="monthly-payment" placeholder="Enter monthly payment amount">
+            </div>
+            
+            <label for="groceries">Groceries:*</label>
+            <input type="number" id="groceries" name="groceries" placeholder="Enter groceries amount" required>
+            
+            <label for="internet-phone">Internet/Phone Bills:*</label>
+            <input type="number" id="internet-phone" name="internet-phone" placeholder="Enter amount" required>
+            
+            <label for="water">Water Bills:*</label>
+            <input type="number" id="water" name="water" placeholder="Enter amount" required>
+            
+            <label for="electricity">Electricity Bills:*</label>
+            <input type="number" id="electricity" name="electricity" placeholder="Enter amount" required>
+            
+            <label for="other">Other Expenses:</label>
+            <input type="number" id="other" name="other" placeholder="Enter amount">
+            
+            <p>'*' = Required</p>
+
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="total-expenses"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
